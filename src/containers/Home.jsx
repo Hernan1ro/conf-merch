@@ -1,7 +1,11 @@
 import React from 'react';
+import initialState from '../initialState';
+import Products from '../components/Products';
+
+console.log(initialState.products);
 
 const Home = () => {
-  return <div>Home</div>;
+  return <Products products={initialState.products} />;
 };
 
 export default Home;
