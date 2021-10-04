@@ -2,8 +2,6 @@ import React from 'react';
 import initialState from '../initialState';
 import Products from '../components/Products';
 
-console.log(initialState.products);
-
 const Home = () => {
   return <Products products={initialState.products} />;
 };
