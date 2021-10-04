@@ -1,20 +1,22 @@
 import React from 'react';
 
-const Product = ({ producto }) => {
+const Product = ({ product, handleAddToCart }) => {
   return (
     <div className="Products-item">
-      <img src={producto.image} alt={producto.title} />
+      <img src={product.image} alt={product.title} />
       <div className="Products-item-info">
         <h2>
-          {producto.title}
+          {product.title}
           <span>
             ${''}
-            {producto.price}
+            {product.price}
           </span>
         </h2>
-        <p>{producto.description}</p>
+        <p>{product.description}</p>
       </div>
-      <button type="button">Comprar</button>
+      <button type="button" onClick={handleAddToCart()}>
+        Comprar
+      </button>
     </div>
   );
 };

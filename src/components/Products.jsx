@@ -1,13 +1,26 @@
 import React from 'react';
 import Product from './Product';
+import AppContext from '../context/AppContext';
 import '../styles/components/Products.css';
 
-const Products = ({ products }) => {
+const Products = () => {
+  const { state, addToCart } = React.useContext(AppContext);
+  const { products } = state;
+
+  const handleAddToCart = (product) => () => {
+    addToCart(product);
+  };
   return (
     <div className="Products">
       <div className="Products-items">
-        {products.map((producto) => {
-          return <Product key={producto.id} producto={producto} />;
+        {products.map((product) => {
+          return (
+            <Product
+              key={product.id}
+              product={product}
+              handleAddToCart={handleAddToCart}
+            />
+          );
         })}
       </div>
     </div>
