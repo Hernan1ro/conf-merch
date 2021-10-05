@@ -24,7 +24,6 @@ const Payment = ({ history }) => {
     return sum;
   };
   const handlePaymentSuccess = (data) => {
-    console.log(data);
     if (data.status === 'COMPLETE') {
       const newOrder = {
         buyer,
