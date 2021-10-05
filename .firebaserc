@@ -1,1 +1,6 @@
-{}
+{
+  "projects": {
+    "conf-merch": "conf-merch-6dce5"
+  },
+  "targets": {}
+}

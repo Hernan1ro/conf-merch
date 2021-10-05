@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <Helmet>
+        <title>Productos conf merch</title>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@TU_USER" />
         <meta name="twitter:creator" content="@TU_USER" />
