@@ -4,8 +4,7 @@ import AppContext from '../context/AppContext';
 import '../styles/components/Products.css';
 
 const Products = () => {
-  const { state, addToCart } = React.useContext(AppContext);
-  const { products } = state;
+  const { products, addToCart } = React.useContext(AppContext);
 
   const handleAddToCart = (product) => () => {
     addToCart(product);
